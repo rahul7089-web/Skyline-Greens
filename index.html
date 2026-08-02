@@ -87,7 +87,6 @@
                 <button class="nav-link text-left py-3 border-b border-gray-50 text-gray-700 font-medium" data-target="amenities">Amenities</button>
                 <button class="nav-link text-left py-3 border-b border-gray-50 text-gray-700 font-medium" data-target="master-plan">Master Plan</button>
                 <button class="nav-link text-left py-3 border-b border-gray-50 text-gray-700 font-medium" data-target="media">Media</button>
-                <button class="nav-link text-left py-3 border-b border-gray-50 text-yellow-600 font-bold" data-target="ai-advisor">✨ AI Advisor</button>
                 <button class="nav-link mt-4 bg-green-700 text-white px-5 py-3 rounded-xl font-medium shadow-md w-full text-center" data-target="contact">Invest Now</button>
             </div>
         </div>
@@ -630,63 +629,6 @@
 
         </section>
 
-    <!-- AI ADVISOR SECTION -->
-    <section id="ai-advisor" class="py-24 bg-gradient-to-br from-green-50 via-white to-yellow-50 relative overflow-hidden border-t border-green-100">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-green-200 rounded-full blur-3xl opacity-30 -mr-20 -mt-20 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-yellow-200 rounded-full blur-3xl opacity-30 -ml-20 -mb-20 pointer-events-none"></div>
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-12 fade-in fade-up">
-                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 font-bold tracking-widest uppercase text-sm mb-4 border border-green-200 shadow-sm">
-                    <i data-lucide="sparkles" class="h-4 w-4"></i> Smart Assistant
-                </span>
-                <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">✨ Ask Our AI Advisor</h3>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Have specific questions about Skyline Greens? Curious about investment returns or local amenities? Ask our AI concierge!
-                </p>
-            </div>
-
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl border border-gray-100 p-6 md:p-10 fade-in fade-up delay-200">
-                <form id="ai-form" class="relative mb-8">
-                    <input 
-                        type="text" 
-                        id="ai-input"
-                        placeholder="E.g., Why is Gwalior a good investment right now?"
-                        class="w-full pl-6 pr-16 py-5 rounded-2xl bg-gray-50 border border-gray-200 focus:border-green-500 focus:ring-4 focus:ring-green-500/20 outline-none text-lg transition-all"
-                    />
-                    <button 
-                        type="submit" 
-                        id="ai-submit"
-                        class="absolute right-3 top-3 bottom-3 aspect-square bg-green-700 hover:bg-green-800 disabled:bg-gray-300 text-white rounded-xl flex items-center justify-center transition-all shadow-md transform hover:scale-105"
-                    >
-                        <i data-lucide="send" id="send-icon" class="h-6 w-6"></i>
-                        <i data-lucide="loader-2" id="loader-icon" class="h-6 w-6 animate-spin hidden"></i>
-                    </button>
-                </form>
-
-                <!-- AI Response Area -->
-                <div id="ai-response-container" class="transition-all duration-500 overflow-hidden max-h-0 opacity-0">
-                    <div class="bg-green-50 border border-green-100 rounded-2xl p-6 relative">
-                        <div class="absolute -top-3 left-6 bg-white border border-green-100 rounded-full p-2 text-green-700 shadow-sm">
-                            <i data-lucide="bot" class="h-5 w-5"></i>
-                        </div>
-                        <div id="ai-response-text" class="mt-2 text-gray-800 leading-relaxed space-y-3">
-                            <!-- Response injected here via JS -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Suggested Questions -->
-                <div id="suggested-questions" class="mt-6 flex flex-wrap gap-2 justify-center">
-                    <button class="suggestion-btn text-sm bg-gray-100 hover:bg-green-100 hover:text-green-800 text-gray-600 px-4 py-2 rounded-full transition-colors border border-transparent hover:border-green-200">What sports facilities are there?</button>
-                    <button class="suggestion-btn text-sm bg-gray-100 hover:bg-green-100 hover:text-green-800 text-gray-600 px-4 py-2 rounded-full transition-colors border border-transparent hover:border-green-200">Tell me about the Agra-Gwalior highway.</button>
-                    <button class="suggestion-btn text-sm bg-gray-100 hover:bg-green-100 hover:text-green-800 text-gray-600 px-4 py-2 rounded-full transition-colors border border-transparent hover:border-green-200">Are there any schools nearby?</button>
-                    <button class="suggestion-btn text-sm bg-gray-100 hover:bg-green-100 hover:text-green-800 text-gray-600 px-4 py-2 rounded-full transition-colors border border-transparent hover:border-green-200">What are the plot sizes?</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER -->
     <footer id="contact" class="relative bg-green-950 text-white pt-24 pb-12 overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -845,7 +787,7 @@
         // (Removed dynamic JS map block generation as we are now using a beautifully rendered SVG map)
 
         // 5. Gemini API Integration for AI Advisor
-        const apiKey = "AQ.Ab8RN6L-rPIkYkrGKfLb7FU4Gr98oLAXJzBJB_LkbPID0wGCxA"; // Set by environment
+        const apiKey = ""; // Set by environment
         const aiForm = document.getElementById('ai-form');
         const aiInput = document.getElementById('ai-input');
         const aiSubmitBtn = document.getElementById('ai-submit');
